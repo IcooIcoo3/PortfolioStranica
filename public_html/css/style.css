@@ -136,6 +136,10 @@
     text-decoration: none;
 }
 
+.navigacija .highlighted {
+    color: #C2272d;
+}
+
 /*
     UPIT FORMA
 */
@@ -319,6 +323,7 @@
 
     .navigacija a {
         padding:4.5%;
+        margin-bottom:4%;
     }
 
     .upit {

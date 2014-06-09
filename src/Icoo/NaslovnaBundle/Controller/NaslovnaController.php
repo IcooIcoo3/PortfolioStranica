@@ -36,7 +36,7 @@ class NaslovnaController extends ContainerAware
             $manager->flush();
 
             $this->container->get('session')->getFlashBag()->add('poruka-poslana', true);
-            return new RedirectResponse($router->generate('naslovna_homepage_route'), 301);
+            return new RedirectResponse($router->generate('icoo_naslovna_route'), 301);
     	}
 
         return $templating->renderResponse('IcooNaslovnaBundle:Naslovna:Naslovna.html.twig',

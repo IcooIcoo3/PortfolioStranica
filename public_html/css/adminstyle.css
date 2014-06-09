@@ -1,0 +1,866 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/opensans-light.eot');
+    src: url('../fonts/OpenSans/opensans-light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans/opensans-light.woff') format('woff'),
+    url('../fonts/OpenSans/opensans-light.ttf') format('truetype'),
+    url('../fonts/OpenSans/opensans-light.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, div, p, label, form, input {
+    padding:0;
+    margin:0;
+}
+
+img {
+    max-width:100%;
+    width:100%;
+}
+
+body {
+    background-color: white;
+}
+
+.wrap {
+    background-color: white;
+    padding:0;
+    margin-bottom:2%;
+}
+
+.interface-wrap {
+    margin-top:5%;
+}
+
+.prijava {
+    font-family: OpenSans, sans-serif;
+    padding:0;
+    float:left;
+    z-index:100;
+}
+
+.prijava h1 {
+    font-family: OpenSans, sans-serif;
+    text-align: left;
+    font-size:3em;
+    margin:2% auto;
+    width:70%;
+}
+
+.prijava h1 label {
+    font-size:0.4em;
+    display:block;
+    padding:2%;
+    padding-left:4%;
+}
+
+.omot-forme {
+    width:70%;
+    margin:0 auto;
+    margin-top:15%;
+    overflow:hidden;
+}
+
+.omot-forme p {
+    float:left;
+    padding:0;
+    margin-top:1%;
+}
+
+.omot-forme form label {
+    width:30%;
+    float:left;
+    font-size:2em;
+    padding:0.5%;
+    text-align: right;
+}
+
+.omot-forme form input, .omot-forme form button {
+    width:50%;
+    float:right;
+
+    font-size:1.8em;
+
+    border:1px solid gray;
+}
+
+.omot-forme form button[type=submit] {
+    background-color: white;
+    margin-top:2%;
+    padding:1%;
+}
+
+.omot-forme form button[type=submit]:hover {
+    background-color: #ED193A;
+    color:white;
+    border:1px solid white;
+}
+
+.omot-forme .error {
+    margin:0;
+}
+
+.omot-forme .error label {
+    float:right;
+    width:50%;
+
+
+    color:#b00000;
+    text-align: center;
+}
+
+.omot-forme .error img {
+    width:15%;
+    float:left;
+}
+
+.omot-forme form .mark-error {
+    border:1px solid #ED193A;
+}
+
+.povratak {
+}
+
+.povratak a {
+    width:30%;
+    float:right;
+    display:block;
+    background-color: #6b6b6b;
+    color:white;
+    font-size:1.3em;
+    text-align: center;
+
+    margin-top:4%;
+    padding:2%;
+}
+
+.povratak a:hover {
+    text-decoration: none;
+    background-color: #333333;
+}
+
+/* ADMINISTRATOR  */
+
+.administrator, .admin-info, .upload-area, .browse-omot, .popis-slika, .administrator h1, .admin-info a {
+    padding:0;
+    margin:0;
+    font-family: OpenSans, sans-serif;
+}
+
+.administrator {
+}
+
+/* AJAX PREGLED */
+
+.ajax-pozadina {
+    display:none;
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:101;
+}
+
+.ajax-pregled {
+    display:none;
+    width:40%;
+    position:absolute;
+    background-color: white;
+    z-index:102;
+    padding:1%;
+    box-shadow:1px 1px 3px black;
+    -webkit-box-shadow:1px 1px 3px gray;
+    -o-box-shadow:1px 1px 5px gray;
+    -webkit-appearance:none;
+    border-radius:15px;
+}
+
+.ajax-pregled h1 {
+    font-size:1.5em;
+    color:#727272;
+    padding:3%; 
+    margin-bottom:3%;
+}
+
+.ajax-pregled .input-block {
+    width:100%;
+}
+
+.ajax-pregled .input-block label {
+    color:#727272;
+}
+
+.ajax-pregled .input-block input[type=text] {
+    border:1px solid #727272;
+}
+
+.ajax-pregled button[type=submit] {
+    float:right;
+    display:block;
+    background-color: #f24c27;
+    font-size:1.4em;
+    color:white;
+    border:none;
+
+    padding:2%;
+    margin-right:9.2%;
+    margin-top:3%;
+}
+
+#odustanak-id {
+    background-color: #8f8f8f;
+}
+
+.ajax-pregled .ajax-outcome-message {
+    border:none;
+    margin-top:5%;
+}
+
+.ajax-pregled button[type=submit]:hover {
+}
+
+/* KORISNIČKO SUČELJE */
+
+.interface-wrap > h1 {
+    font-size:2em;
+    padding-bottom:1%;
+    border-bottom:1px solid #d1d1d1;;
+    color:#3a3a3a;
+}
+
+.administrator .admin-info {
+    float:right;
+}
+
+.admin-info span {
+    width:25px;
+    height:25px;
+    position:absolute;
+    top:0; left:25%;
+
+    background: url(../images/ikone/admin/odjava.png) no-repeat 50% 30%;
+    background-size: 140% 140%;
+    -webkit-background-size: 140% 140%;
+}
+
+.admin-info .logout {
+    display:block;
+    text-align: right;
+    font-size:1.3em;
+    padding:1%;
+    color:#3a3a3a;
+    border-bottom-left-radius: 15px;
+
+    transition-property:border-left, border-bottom, box-shadow;
+    transition-duration:0.3s;
+    -webkit-transition-property:border-left, border-bottom, box-shadow;
+    -webkit-transition-duration:0.3s;
+    -moz-transition-property:border-left, border-bottom, box-shadow;
+    -moz-transition-duration:0.3s;
+    -o-transition-property:border-left, border-bottom, box-shadow;
+    -o-transition-duration:0.3s;
+
+    border:1px solid white;
+}
+
+.admin-info .logout:hover {
+    text-decoration: none;
+
+    box-shadow: -1px 1px 1px #3a3a3a;
+    -webkit-box-shadow: -1px 1px 1px #3a3a3a;
+    -webkit-appearance:none;
+}
+
+/* NAVIGACIJA GLAVNA */
+
+.nav-wrap {
+    padding:0;
+    background-color: #F24C27;
+    padding-bottom:65%;
+    border-right:6px solid #8F8F8F;
+}
+
+.main-nav {
+    padding:0;
+    float:left;
+    background-color: #024959;
+    border-bottom:6px solid #8F8F8F;
+}
+
+.main-nav li {
+    padding:0;
+}
+
+.main-nav a {
+    position:relative;
+    display:block;
+    color: white;
+    font-size:1.4em;
+    padding:5%;
+
+    transition-property:background-color, padding-left;
+    transition-duration:0.3s;
+    -webkit-transition-property:background-color, padding-left;
+    -webkit-transition-duration:0.3s;
+    -o-transition-property:background-color, padding-left;
+    -o-transition-duration:0.3s;
+    -moz-transition-property:background-color, padding-left;
+    -moz-transition-duration:0.3s;
+}
+
+.main-nav li span {
+    width:40px;
+    height:40px;
+    position: absolute;
+    top:10%;
+    left:75%;
+}
+
+.main-nav li .radna-icon {
+    background: url(../images/ikone/admin/dashboard.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+}
+
+.main-nav li .galerija-icon {
+    background: url(../images/ikone/admin/galerija.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+}
+
+.main-nav li .booking-icon {
+    background: url(../images/ikone/admin/booking.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+}
+
+.main-nav li .admin-icon {
+    background: url(../images/ikone/admin/administrator.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+}
+
+.main-nav li .rezerv-icon {
+    background: url(../images/ikone/admin/rezervacija.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.main-nav li .addbook-icon {
+    background: url(../images/ikone/admin/dodaj-booking.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.main-nav li .pregled-icon {
+    background: url(../images/ikone/admin/pregled-bookinga.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.main-nav a:hover {
+    color:white;
+    text-decoration: none;
+    background-color: #FF3300;
+    border-right:6px solid #b71616;
+
+    padding-left:8%;
+}
+
+.main-nav ul li {
+    position: relative;
+}
+
+.main-nav ul li ul {
+    display:none;
+}
+
+.inner-nav {
+    width:100%;
+    background-color: #024959;
+}
+
+.main-nav ul li:hover ul {
+    display:block;
+    position:absolute;
+    left:100%; top:0%;
+    z-index:1000;
+}
+
+/* PODACI O ADMINISTRATORU */
+
+.misc-info, .administrator-podaci, .admin-lista, .admin-lista li, .admin-lista li span {
+    padding:0;
+}
+
+.misc-info {
+    float:left;
+}
+
+.administrator-podaci {
+    float:left;
+    color:white;
+    font-size:1.1em;
+    margin-bottom:6%;
+}
+
+.administrator-podaci h1 {
+    padding:2%;
+    border-bottom:1px dotted white;
+}
+
+.admin-lista {
+}
+
+.admin-lista li {
+}
+
+.admin-lista li span {
+    display:block;
+    float:left;
+    padding:2%;
+    padding-left:5%;
+}
+
+.admin-lista li span:last-child {
+    text-align: right;
+    padding-left:0;
+}
+
+/* GALERIJA */
+
+.upload-area {
+    float:left;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.upload-form {
+    width:60%;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+.upload-area .browse-omot {
+    position:relative;
+    height:65px;
+    overflow: hidden;
+
+
+    /*box-shadow:2px 2px 5px gray;
+    -webkit-box-shadow:2px 2px 5px gray;
+    -webkit-appearance:none;
+
+    transition-property:box-shadow;
+    transition-duration:0.3s;
+    -webkit-transition-property:box-shadow;
+    -webkit-transition-duration:0.3s;
+    -moz-transition-property:box-shadow;
+    -moz-transition-duration:0.3s;
+    -o-transition-property:box-shadow;
+    -o-transition-duration:0.3s;*/
+
+    background-color: #9bd9f2;
+    color:white;
+    border-bottom:8px solid #25a9e1;
+    border-right: 6px solid #25a9e1;
+}
+
+.upload-area .browse-omot:hover {
+    border-bottom:8px solid #9bd9f2;
+    border-right: 6px solid #9bd9f2;
+    /*box-shadow:1px 1px 1px gray;
+    -webkit-box-shadow:1px 1px 1px gray;*/
+}
+
+.upload-area .browse-omot span, .upload-area .browse-omot img {
+    position:absolute;
+    top:16%; left:32%;
+    z-index:1;
+
+    font-size:1.8em;
+}
+
+.upload-area .browse-omot img {
+    width:12%;
+    top:-10%; left:3%;
+}
+
+.upload-area input[type=file] {
+    position:absolute;
+    top:0; left:0;
+    z-index:100;
+
+    display:block;
+    width:100%;
+
+    padding-bottom:35%;
+    margin-top:-17%;
+}
+
+.upload-area input[type=submit] {
+    display:block;
+
+    margin-top:5%;
+
+    background-color: #5CB6FF;
+    color:white;
+    font-size:1.5em;
+
+    padding:2%;
+
+    border:none;
+}
+
+.upload-area input[type=submit]:hover {
+    background-color: #1081DE;
+}
+
+/* ADMINISTRATOR POPIS REZERVACIJA */
+
+/* ADMINISTRACIJA */
+
+.administracija {
+    margin-top:2%;
+}
+
+.administracija .uspjeh {
+    display:block;
+    width:100%;
+    float:left;
+    color:white;
+    background-color: #77a4ff;
+
+    padding:1%;
+    margin-top:2%;
+
+    border:1px solid red;
+}
+
+.administracija .input-block label {
+    font-size:1.5em;
+}
+
+.administracija .input-block input[type=text] {
+    padding:1%;
+}
+
+
+/* POPIS SLIKA  */
+
+.popis-slika {
+    float:left;
+}
+
+.popis-slika h1 {
+    font-size:2em;
+    margin-bottom:3%;
+    border-bottom:1px dashed gray;
+    color:#3a3a3a;
+}
+
+.popis-slika figure {
+    display:block;
+    padding:1%;
+}
+
+.popis-slika figure img {
+    transition-property:box-shadow;
+    transition-duration:0.3s;
+    -webkit-transition-property:box-shadow;
+    -webkit-transition-duration:0.3s;
+    -moz-transition-property:box-shadow;
+    -moz-transition-duration:0.3s;
+    -o-transition-property:box-shadow;
+    -o-transition-duration:0.3s;
+}
+
+.popis-slika figure img:hover {
+    box-shadow:2px 2px 5px black;
+    -webkit-box-shadow:2px 2px 5px black;
+    -webkit-appearance:none;
+}
+
+.detalji-popisa {
+    float:left;
+    overflow:hidden;
+    position:relative;
+
+    height:180px;
+    padding:0.3%;
+}
+
+.detalji-popisa a {
+    display:block;
+    position:absolute;
+    top:5%; left:85%;
+}
+
+.upload-success {
+    font-size:1.3em;
+
+    margin-bottom:4%;
+
+    text-align: center;
+
+    background-color: #63B82A;
+    color:white;
+
+    padding:1%;
+}
+
+.upload-error {
+    display:block;
+
+    color:white;
+    background-color: #fc5d5d;
+    border-top:6px solid #C91C1C;
+    font-size:1.3em;
+    text-align: center;
+
+    margin-top:4%;
+    padding:2%;
+}
+
+.js-error-label {
+    display:block;
+    width:40%;
+    margin:0 auto;
+    margin-top:5%;
+    overflow:hidden;
+
+
+    color:white;
+    background-color: #fc5d5d;
+    border-top:6px solid #C91C1C;
+
+    font-size:1.3em;
+
+    padding:2%;
+    text-align: center;
+}
+
+#progress-gif {
+    display:block;
+    width:5%;
+    margin:0 auto;
+    margin-top:2%;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+/* ADD BOOKING */
+
+.forma-rezervacije {
+    font-family: OpenSans, sans-serif;
+    float:left;
+    margin-top:3%;
+}
+
+.input-block {
+    float:left;
+    padding:1%;
+}
+
+.input-block label {
+    display:block;
+    width:30%;
+    float:left;
+    font-size:1.1em;
+    text-align: right;
+    padding:0.5%;
+    border-bottom:1px dotted #d1d1d1;;
+    color:#3a3a3a;
+}
+
+.input-block span {
+    color:#3a3a3a;
+}
+
+.input-block input[type=text] {
+    display:block;
+    width:50%;
+    float:right;
+    margin-right:10%;
+    border:1px solid #d1d1d1;
+    padding:0.5%;
+    color:black;
+}
+
+.rezervacija-submit button[type=submit] {
+    display:block;
+    width:40%;
+    float:right;
+    padding:1.5%;
+    border:none;
+    text-align: left;
+    font-size:1.4em;
+
+    margin:3% 10% 5% 0;
+    color:white;
+    background-color: #024959;
+
+    transition-property:background-color, padding-left;
+    transition-duration:0.3s;
+    -webkit-transition-property:background-color, padding-left;
+    -webkit-transition-duration:0.3s;
+    -o-transition-property:background-color, padding-left;
+    -o-transition-duration:0.3s;
+    -moz-transition-property:background-color, padding-left;
+    -moz-transition-duration:0.3s;
+}
+
+.rezervacija-submit button[type=submit]:hover {
+    color:white;
+    text-decoration: none;
+    background-color: #FF3300;
+    border-right:6px solid #b71616;
+
+    padding-left:2.5%;
+}
+
+.input-block input[type=text]:hover {
+    border:1px solid #515151;
+}
+
+.input-block input[type=text]:focus {
+    border:1px solid #515151;
+}
+
+.error-block {
+    position:relative;
+    width:100%;
+    float:right;
+    margin-top:0.5%;
+}
+
+.error-block ul {
+    width:40%;
+    float:right;
+    margin-right:20%;
+    padding-top:1%;
+
+    color:#b71616;
+}
+
+.error-block ul li {
+    line-height: 1.3em;
+}
+
+.double-error ul li {
+    margin-bottom:4%;
+}
+
+.error-block img {
+    display:block;
+    width:2.5%;
+    float:left;
+    margin-left:35%;
+    margin-top:0.8%;
+}
+
+#js-error-img {
+    display:none;
+    width:25px;
+    height:25px;
+    position:absolute;
+    top:15%; left:35%;
+}
+
+#js-error-kratka, #js-error-duga {
+    display:none;
+    float:right;
+    width:50%;
+    margin-right:10%;
+    color:#C91C1C;
+    text-align: left;
+}
+
+.uspjeh {
+    display:block;
+    width:100%;
+
+    color:white;
+    background-color: #45ad08;
+    font-size:1.2em;
+    text-align: center;
+    line-height: 1.3em;
+    letter-spacing: 0.02em;
+    word-spacing: 0.03em;
+
+    padding:1%;
+    margin-top:2%;
+}
+
+/* POPIS USLUGA */
+
+.popis-usluga {
+    margin-top:2%;
+}
+
+.usluga {
+    float:left;
+    margin-left:2%;
+    margin-bottom:1%;
+    padding:0;
+    overflow:hidden;
+
+    transition-property:background-color
+    transition-duration:0.3s;
+    -webkit-transition-property:background-color
+    -webkit-transition-duration:0.3s;
+    -o-transition-property:background-color
+    -o-transition-duration:0.3s;
+    -moz-transition-property:background-color
+    -moz-transition-duration:0.3s;
+}
+
+.usluga a {
+    display:block;
+    font-size:1.3em;
+    color:white;
+}
+
+.usluga .izabiranje {
+    position:relative;
+    width:87%;
+    float:left;
+    padding:2.2%;
+    background-color: #8F8F8F;
+}
+
+.usluga .brisanje {
+    width:10%;
+    float:right;
+    background-color: #8F8F8F;
+}
+
+#loading {
+    width:100%;
+    float:left;
+    display: none;
+    font-size:1.3em;
+    color:white;
+    text-align: center;
+
+    margin-top:10%;
+}
+
+.usluga a img {
+    width:100%;
+}
+
+.usluga a:hover {
+    color:white;
+    text-decoration: none;
+    background-color: #FF3300;
+}
+
+#ajax-product {
+    display:none;
+    font-size:1.4em;
+    padding:3%;
+}

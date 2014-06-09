@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+
+<header class='header col-xs-7'>
+
+	<div class='color-wrap col-xs-12'>
+		<div class='firm-title col-xs-8'>
+			<h1 class='firm-name'><a href='{{ path('icoo_naslovna_route') }}'><span class='white-icoo'>ICOO</span><span class='black-icoo'>ICOO</span></a></h1>
+    	</div>
+    </div>
+
+    <div class='space-align col-xs-12'>
+        <div class='firm-occupation col-xs-4'>
+    	    <h1>professional web development</h1>
+        </div>
+
+        {% set requestParams = app.request.attributes.get('_route_params') %}
+        {% set requestRoute = app.request.attributes.get('_route') %}
+        <div class='languages col-xs-4'>
+        	<a href="{{ path(requestRoute, requestParams|merge({'_locale' : 'hr'})) }}" class='col-xs-3'><span class='real-link'>croatian</span><span></span></a>
+        	<a href="{{ path(requestRoute, requestParams|merge({'_locale' : 'en'})) }}" class='col-xs-3'><span class='real-link'>english</span><span>|</span></a>
+        	<a href="{{ path(requestRoute, requestParams|merge({'_locale' : 'de'})) }}" class='col-xs-3'><span class='real-link'>deutch</span><span>|</span></a>
+        </div>
+    </div>
+</header>
+
+{% endblock %}
+
+{% block navigacija %}
+
+<div class='navigacija col-xs-12'>
+	<nav class='col-xs-8'>
+		<ul>
+			<li><a href='{{ path('icoo_naslovna_route') }}'>Naslovna</a></li>
+			<li><a href='{{ path('icoo_djelatnost_route') }}'>Što radimo?</a></li>
+			<li><a href='{{ path('icoo_projekti_route') }}'>Projekti</a></li>
+			<li><a href='{{ path('icoo_fotografija_route') }}'>Web fotografija</a></li>
+			<li><a href='{{ path('icoo_potrebe_projekta_route') }}'>Što je potrebno za projekt?</a></li>
+			<li><a href='{{ path('icoo_pitanja_route') }}'>Najčešća pitanja</a></li>
+		</ul>
+	</nav>
+</div>
+	
+{% endblock %}

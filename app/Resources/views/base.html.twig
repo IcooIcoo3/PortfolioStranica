@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}IcooIcoo | Web development | Dizajn | Fotografija{% endblock %}</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% block stylesheets %}{% endblock %}
+        {% block javascript %}{% endblock %}
+    </head>
+    <body>
+        <div class='main-wrap col-xs-12' id='main-wrap-id'> 
+            {% block header %}{% endblock %}
+
+            <div class='aside-content col-xs-5'>
+                {% block navigacija %}{% endblock %}
+                {% block changable_sidebar %}{% endblock %}
+            </div>
+    
+            {% block stoRadimo %}{% endblock %}
+            {% block projekti %}{% endblock %}
+            {% block fotografija %}{% endblock %}
+            {% block potrebeProjekta %}{% endblock %}
+            {% block pitanja %}{% endblock %}
+            {% block upit %}{% endblock %}
+        </div>
+    </body>
+</html>

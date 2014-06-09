@@ -1,0 +1,7 @@
+parameters:
+#    icoo_fotogracija.example.class: Icoo\FotogracijaBundle\Example
+
+services:
+#    icoo_fotogracija.example:
+#        class: %icoo_fotogracija.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

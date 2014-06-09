@@ -1,0 +1,7 @@
+parameters:
+#    icoo_potrebe_projekta.example.class: Icoo\PotrebeProjektaBundle\Example
+
+services:
+#    icoo_potrebe_projekta.example:
+#        class: %icoo_potrebe_projekta.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

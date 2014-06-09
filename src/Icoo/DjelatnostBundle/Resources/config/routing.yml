@@ -1,0 +1,5 @@
+icoo_djelatnost_route:
+    pattern:  /{_locale}/sto-radimo
+    defaults: { _controller: IcooDjelatnostBundle:Djelatnost:index, _locale:hr }
+    requirements:
+        _locale: hr|en|de

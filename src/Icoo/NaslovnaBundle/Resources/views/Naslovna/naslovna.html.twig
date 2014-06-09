@@ -1,0 +1,71 @@
+{% extends '::common.html.twig' %}
+
+{% block stylesheets %}
+
+	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+	<link href="{{ asset('css/eric_reset.css') }}" rel="stylesheet" media="screen">
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block javascript %}
+	<script src='{{ asset('js/jquery-1.10.2.min.js') }}'></script>
+	<script src='{{ asset('js/Mario.js') }}'></script>
+{% endblock %}
+
+{% block changable_sidebar %}
+
+<div class='upit col-xs-12' id='upit-id'>
+
+    <div class='upit-form-wrap col-xs-8' id='upit-form-wrap-id'>
+    	<div class='naslov-poruka col-xs-12'>
+    	    <h1>Pošaljite upit</h1>
+    	    {% if app.session.flashBag.get('poruka-poslana') == true %}
+    	    <label>Vaš upit je zaprimljen. Javit ćemo vam se u najkraćem mogućem roku</label>
+    	    {% endif %}
+        </div>
+    	
+	{{ form_start(form, {'attr' : {'novalidate' : 'novalidate', 'id' : 'form-upit-id'}}) }}
+
+		<div class='form-row'>
+			{{ form_label(form.ime, 'Ime /') }}
+			{{ form_widget(form.ime) }}
+
+			{% if not form.ime.vars.valid %}
+			<div class='error'>
+				{{ form_errors(form.ime) }}
+			</div>
+			{% endif %}
+			<label id='js-error-form_ime' class='js-error col-xs-12' >Ime ne smije biti prazno</label>
+	    </div>
+
+	    <div class='form-row'>
+	    	{{ form_label(form.email, 'Email /') }}
+	    	{{ form_widget(form.email) }}
+
+	    	{% if not form.email.vars.valid %}
+	    		<div class='error'>
+	    			{{ form_errors(form.email) }}
+	    		</div>
+	    	{% endif %}
+	    	<label id='js-error-form_email' class='js-error col-xs-12' >E-mail ne smije biti prazam</label>
+	    </div>
+
+	    <div class='form-row'>
+	    	{{ form_label(form.upit, 'Upit ?') }}
+
+	    	<div class='upit-textarea'>
+	    	    {{ form_widget(form.upit) }}
+	    	    {{ form_errors(form.upit) }}
+
+
+	    	    <div class='form-submit'>
+	    		    {{ form_widget(form.Posalji, {'label' : 'Pošalji'}) }}
+	    	    </div>
+	        </div>
+	    </div>
+
+	{{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}

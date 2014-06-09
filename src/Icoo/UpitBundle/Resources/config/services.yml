@@ -1,0 +1,7 @@
+parameters:
+    icoo.upit.form : Icoo\UpitBundle\Controller\UpitController
+
+services:
+    upit.controller:
+        class: "%icoo.upit.form%"
+        arguments : ["@form.factory"]

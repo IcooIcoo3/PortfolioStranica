@@ -1,0 +1,7 @@
+parameters:
+#    icoo_projekti.example.class: Icoo\ProjektiBundle\Example
+
+services:
+#    icoo_projekti.example:
+#        class: %icoo_projekti.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

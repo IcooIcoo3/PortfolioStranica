@@ -1,0 +1,5 @@
+icoo_pitanja_route:
+    pattern:  /{_locale}/najcesca-pitanja
+    defaults: { _controller: IcooPitanjaBundle:Pitanja:pitanja, _locale:hr }
+    requirements:
+        _locale: hr|en|de

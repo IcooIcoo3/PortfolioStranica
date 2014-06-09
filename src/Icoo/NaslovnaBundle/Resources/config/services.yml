@@ -1,0 +1,7 @@
+parameters:
+#    icoo_naslovna.example.class: Icoo\NaslovnaBundle\Example
+
+services:
+#    icoo_naslovna.example:
+#        class: %icoo_naslovna.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

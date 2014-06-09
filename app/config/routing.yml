@@ -1,0 +1,28 @@
+icoo_pitanja:
+    resource: "@IcooPitanjaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_naslovna:
+    resource: "@IcooNaslovnaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_upit:
+    resource: "@IcooUpitBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_potrebe_projekta:
+    resource: "@IcooPotrebeProjektaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_fotogracija:
+    resource: "@IcooFotografijaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_projekti:
+    resource: "@IcooProjektiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+icoo_djelatnost:
+    resource: "@IcooDjelatnostBundle/Resources/config/routing.yml"
+    prefix:   /
+

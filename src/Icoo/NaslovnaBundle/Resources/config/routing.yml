@@ -1,0 +1,5 @@
+icoo_naslovna_route:
+    pattern:  /{_locale}
+    defaults: { _controller: IcooNaslovnaBundle:Naslovna:naslovna, _locale: hr }
+    requirements:
+        _locale: hr|en|de

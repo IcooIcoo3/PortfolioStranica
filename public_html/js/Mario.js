@@ -159,9 +159,8 @@ $(document).ready(function() {
 
     ( function() {
         $('.answer-list').addClass('answer-list-display');
-        var visible = false;
         $('.question button').click(function() {
-            $(this).next().fadeToggle(300);
-        });
+            $(this).next().slideToggle(300);
+        })
     } () )
 });

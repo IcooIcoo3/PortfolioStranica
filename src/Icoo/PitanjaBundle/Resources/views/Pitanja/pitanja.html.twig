@@ -4,4 +4,46 @@
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/eric_reset.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+	<link href="{{ asset('css/FontAwesome/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascript %}
+	<script src='{{ asset('js/jquery-1.10.2.min.js') }}'></script>
+	<script src='{{ asset('js/Mario.js') }}'></script>
+{% endblock %}
+
+{% block pitanja %}
+	<div class='pitanja col-xs-7'>
+		<h1><span class='fa fa-wechat fa-2x title-question-icon'></span>Najčešća pitanja</h1>
+
+		<ul class='top-list col-xs-12' id='top-list-id'>
+			<li class='question col-xs-12'><button class='col-xs-12'>Zašto je bitna kvalitetna komunikacija između nas (web čarobnjaka) i vas (poštovanog klijenta)?<span class='fa fa-exchange fa-lg question-icons'></span></button>
+				<ul class='answer-list col-xs-11'>
+					<div class='answer-icon col-xs-2'>
+						<span class='fa fa-pencil-square-o fa-3x'></span>
+					</div>
+					<li class='col-xs-10'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo 		pretium. Donec ut leo id dui condimentum euismod.
+					</li>
+					<li class='col-xs-10'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo pretium. Donec ut leo id dui condimentum euismod.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo pretium. Donec ut leo id dui condimentum euismod.
+					</li>
+			    </ul>
+			</li>
+
+			<li class='question col-xs-12'><button class='col-xs-12'>Koje su faze izrade web aplikacije<span class='fa fa-sort-alpha-asc fa-lg question-icons'></span></button>
+				<ul class='answer-list col-xs-11'>
+					<div class='answer-icon col-xs-2'>
+						<span class='fa fa-pencil-square-o fa-3x'></span>
+					</div>
+					<li class='col-xs-10'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo 		pretium. Donec ut leo id dui condimentum euismod.
+					</li>
+					<li class='col-xs-10'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo pretium. Donec ut leo id dui condimentum euismod.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sagittis orci nec libero laoreet, nec semper leo pretium. Donec ut leo id dui condimentum euismod.
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 {% endblock %}

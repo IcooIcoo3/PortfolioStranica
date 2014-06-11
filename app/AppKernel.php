@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Icoo\UpitBundle\IcooUpitBundle(),
             new Icoo\NaslovnaBundle\IcooNaslovnaBundle(),
             new Icoo\PitanjaBundle\IcooPitanjaBundle(),
+            new Icoo\CommonBundle\IcooCommonBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

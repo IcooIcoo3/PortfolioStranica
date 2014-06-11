@@ -1,3 +1,7 @@
+icoo_common:
+    resource: "@IcooCommonBundle/Resources/config/routing.yml"
+    prefix:   /
+
 icoo_pitanja:
     resource: "@IcooPitanjaBundle/Resources/config/routing.yml"
     prefix:   /

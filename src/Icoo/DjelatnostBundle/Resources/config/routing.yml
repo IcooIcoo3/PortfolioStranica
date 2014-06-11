@@ -3,3 +3,9 @@ icoo_djelatnost_route:
     defaults: { _controller: IcooDjelatnostBundle:Djelatnost:index, _locale:hr }
     requirements:
         _locale: hr|en|de
+
+icoo_djelatnost_route:
+    pattern:  /{_locale}/about-us
+    defaults: { _controller: IcooDjelatnostBundle:Djelatnost:index, _locale:en }
+    requirements:
+        _locale: hr|en|de

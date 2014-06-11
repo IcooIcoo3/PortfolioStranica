@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 use Icoo\UpitBundle\Entity\UpitEntity;
 use Icoo\UpitBundle\Forms\UpitForm;
+use Icoo\CommonBundle\CustomPhp\Translator;
 
 class NaslovnaController extends ContainerAware
 {
@@ -19,6 +20,13 @@ class NaslovnaController extends ContainerAware
     }
 
     public function naslovnaAction(Request $request) {
+
+        // osnovni prijevod stranice : navigacija, professional web development i upit
+        // da bi koristio druge, potrebno je pozvati metode specifične za određene dijelove stranice
+        // basicTranslation() metoda vraća Icoo\CommonBundle\CustomPhp\Translator objekt pa ga se može i dalje upotrebljavat
+        $translator = Translator::init($this->container->get('translator'))->basicTranslation();
+
+
     	// dependencies
     	$templating = $this->container->get('templating');
     	$formFactory = $this->container->get('form.factory');
@@ -41,7 +49,8 @@ class NaslovnaController extends ContainerAware
 
         return $templating->renderResponse('IcooNaslovnaBundle:Naslovna:Naslovna.html.twig',
         	array(
-        		'form' => $form->createView()
+        		'form' => $form->createView(),
+                'translation' => $translator->getTranslated(),
             )
         );
     }

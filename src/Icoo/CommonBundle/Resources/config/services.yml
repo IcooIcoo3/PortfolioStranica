@@ -1,0 +1,7 @@
+parameters:
+#    icoo_common.example.class: Icoo\CommonBundle\Example
+
+services:
+#    icoo_common.example:
+#        class: %icoo_common.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

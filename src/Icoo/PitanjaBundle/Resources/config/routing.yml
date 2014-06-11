@@ -3,3 +3,9 @@ icoo_pitanja_route:
     defaults: { _controller: IcooPitanjaBundle:Pitanja:pitanja, _locale:hr }
     requirements:
         _locale: hr|en|de
+
+icoo_pitanja_route:
+    pattern:  /{_locale}/common-questions
+    defaults: { _controller: IcooPitanjaBundle:Pitanja:pitanja, _locale:en }
+    requirements:
+        _locale: hr|en|de

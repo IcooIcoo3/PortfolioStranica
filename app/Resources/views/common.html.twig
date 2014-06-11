@@ -34,12 +34,12 @@
 		<ul>
 			 {% set route = app.request.attributes.get('_route') %}
 
-			<li><a href='{{ path('icoo_naslovna_route') }}' class='{% if route == 'icoo_naslovna_route'  %}{{ 'highlighted' }}{% endif %}'>Naslovna</a></li>
-			<li><a href='{{ path('icoo_djelatnost_route') }}'  class='{% if route == 'icoo_djelatnost_route'  %}{{ 'highlighted' }}{% endif %}'>Što radimo?</a></li>
-			<li><a href='{{ path('icoo_projekti_route') }}'  class='{% if route == 'icoo_projekti_route'  %}{{ 'highlighted' }}{% endif %}'>Projekti</a></li>
-			<li><a href='{{ path('icoo_fotografija_route') }}'  class='{% if route == 'icoo_fotografija_route'  %}{{ 'highlighted' }}{% endif %}'>Web fotografija</a></li>
-			<li><a href='{{ path('icoo_potrebe_projekta_route') }}'  class='{% if route == 'icoo_potrebe_projekta_route'  %}{{ 'highlighted' }}{% endif %}'>Što je potrebno za projekt?</a></li>
-			<li><a href='{{ path('icoo_pitanja_route') }}'  class='{% if route == 'icoo_pitanja_route'  %}{{ 'highlighted' }}{% endif %}'>Najčešća pitanja</a></li>
+			<li><a href='{{ path('icoo_naslovna_route') }}' class='{% if route == 'icoo_naslovna_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav1 }}</a></li>
+			<li><a href='{{ path('icoo_djelatnost_route') }}'  class='{% if route == 'icoo_djelatnost_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav2 }}</a></li>
+			<li><a href='{{ path('icoo_projekti_route') }}'  class='{% if route == 'icoo_projekti_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav3 }}</a></li>
+			<li><a href='{{ path('icoo_fotografija_route') }}'  class='{% if route == 'icoo_fotografija_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav4 }}</a></li>
+			<li><a href='{{ path('icoo_potrebe_projekta_route') }}'  class='{% if route == 'icoo_potrebe_projekta_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav5 }}</a></li>
+			<li><a href='{{ path('icoo_pitanja_route') }}'  class='{% if route == 'icoo_pitanja_route'  %}{{ 'highlighted' }}{% endif %}'>{{ translation.nav6 }}</a></li>
 		</ul>
 	</nav>
 </div>

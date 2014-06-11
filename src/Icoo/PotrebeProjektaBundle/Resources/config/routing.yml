@@ -3,3 +3,9 @@ icoo_potrebe_projekta_route:
     defaults: { _controller: IcooPotrebeProjektaBundle:PotrebeProjekta:potrebeProjekta, _locale:hr }
     requirements:
         _locale: hr|en|de
+
+icoo_potrebe_projekta_route:
+    pattern:  /{_locale}/project-needs
+    defaults: { _controller: IcooPotrebeProjektaBundle:PotrebeProjekta:potrebeProjekta, _locale:en }
+    requirements:
+        _locale: hr|en|de

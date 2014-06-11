@@ -212,6 +212,10 @@
     transition-duration:0.2s;
 }
 
+.upit-textarea .form-submit .brojac-znakova {
+    color:#7f7f7f;
+}
+
 .upit-textarea .form-submit button[type=submit]:hover {
     background-color: #C2272d;
     color:white;
@@ -395,9 +399,17 @@
         margin-bottom:4%;
     }
 
+    /* FORMA UPITA */
+
     .upit {
         float:left;
         padding:4.5%;
+    }
+
+    .upit-textarea .form-submit .brojac-znakova {
+        width:60%;
+        float:left;
+        padding:2% 0 0 2%;
     }
 
     /* NAJČEŠĆA PITANJA */

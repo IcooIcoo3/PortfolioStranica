@@ -35,7 +35,11 @@
 				{{ form_errors(form.ime) }}
 			</div>
 			{% endif %}
+            {% if app.request.get('_locale') == 'hr'%}
 			<label id='js-error-form_ime' class='js-error col-xs-12' >Ime ne smije biti prazno</label>
+            {% elseif app.request.get('_locale') == 'en' %}
+            <label id='js-error-form_ime' class='js-error col-xs-12' >Name cannot be blank</label>
+            {% endif %}
 	    </div>
 
 	    <div class='form-row'>
@@ -47,7 +51,11 @@
 	    			{{ form_errors(form.email) }}
 	    		</div>
 	    	{% endif %}
-	    	<label id='js-error-form_email' class='js-error col-xs-12' >E-mail ne smije biti prazam</label>
+            {% if app.request.get('_locale') == 'hr'%}
+                <label id='js-error-form_email' class='js-error col-xs-12' >Email ne smije biti prazan</label>
+            {% elseif app.request.get('_locale') == 'en' %}
+                <label id='js-error-form_email' class='js-error col-xs-12' >Email cannot be blank</label>
+            {% endif %}
 	    </div>
 
 	    <div class='form-row'>
@@ -57,7 +65,8 @@
 	    	    {{ form_widget(form.upit) }}
 
 
-	    	    <div class='form-submit'>
+	    	    <div class='form-submit' id="form-submit-wrap-id">
+                    <!--<p class="brojac-znakova">Preostalo znakova: 0 od 5000</p>-->
 	    		    {{ form_widget(form.Posalji, {'label' : translation.upit_submit}) }}
 	    	    </div>
 	        </div>

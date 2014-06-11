@@ -95,7 +95,7 @@ $(document).ready(function() {
                     fields[prop].value = $(fields[prop].id).val();
                 }
             }
-        }
+        };
 
         this.handleForm = function() {
             var fieldValue;
@@ -107,7 +107,7 @@ $(document).ready(function() {
                     }
                 }
             }
-        }
+        };
 
         this.isValid = function() {
             for(var prop in fields) {
@@ -119,7 +119,7 @@ $(document).ready(function() {
             }
 
             return true;
-        }
+        };
 
         this.handleErrors = function() {
             var valid, error;
@@ -154,6 +154,35 @@ $(document).ready(function() {
             })
         }
     });
+
+    /* BROJAČ ZNAKOVA */
+
+    ( function() {
+        var brojac = $("<p class='brojac-znakova'>Preostalo znakova: <span id='trenutno'>0</span> od <span id='ukupno'>5000</span></p>");
+        $('#form-submit-wrap-id').append(brojac);
+
+        var textarea = document.getElementById('form_upit');
+        var textareaCount = textarea.textLength;
+
+        $('#form_upit').keypress(function(evn) {
+            var trenutnoElem = document.getElementById('trenutno');
+            var trenutniBroj = parseInt(trenutnoElem.textContent)
+
+            if(textareaCount > 0) {
+                trenutnoElem.textContent = textareaCount;
+            }
+
+            if(evn.keyCode == 8) {
+                console.log('kreten');
+                trenutnoElem.textContent = current - 1;
+                previous = trenutniBroj - 1;
+            }
+            else {
+                trenutnoElem.textContent = current + 1;
+                previous = trenutniBroj + 1;
+            }
+        });
+    } () );
 
     /* UREĐENJA NA NAJČEŠĆIM PITANJIMA */
 

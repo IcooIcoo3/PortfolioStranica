@@ -35,7 +35,7 @@ class NaslovnaController extends ContainerAware
 
         $upit = new UpitEntity();
     	$builder = $formFactory->createBuilder('form', $upit, array());
-        $form = UpitForm::inst()->createForm($builder)->getForm();
+        $form = UpitForm::inst($translator)->createForm($builder)->getForm();
 
     	$form->handleRequest($request);
 

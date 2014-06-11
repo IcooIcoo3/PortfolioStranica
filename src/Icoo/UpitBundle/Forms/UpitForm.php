@@ -4,36 +4,40 @@ namespace Icoo\UpitBundle\Forms;
 
 use Symfony\Component\Form\FormBuilderInterface;
 
+use Icoo\CommonBundle\CustomPhp\Translator;
+
 class UpitForm
 {
     private static $instance;
     private $builder;
 
-    public static function inst() {
-        return (self::$instance instanceof UpitForm) ? self::$instance : (self::$instance = new UpitForm());
+    private $translator;
+
+    public static function inst($translator) {
+        return (self::$instance instanceof UpitForm) ? self::$instance : (self::$instance = new UpitForm($translator));
     }
 
-    private function __construct() {
-
+    private function __construct(Translator $translator) {
+        $this->translator = $translator->upit();
     }
 
     public function createForm(FormBuilderInterface $builder) {
         $builder
             ->add('ime', 'text', array(
                     'attr' => array(
-                            'placeholder' => 'Vaše cijenjeno ime'
+                            'placeholder' => $this->translator->getSpecificTranslation('ime_placeholder')
                         )
                     )
             )
             ->add('email', 'email', array(
                     'attr' => array(
-                            'placeholder' => 'Vaša Email adresa'
+                            'placeholder' => $this->translator->getSpecificTranslation('email_placeholder')
                         )
                     )
             )
             ->add('upit', 'textarea', array(
                     'attr' => array(
-                            'placeholder' => 'Vaš upit ...'
+                            'placeholder' => $this->translator->getSpecificTranslation('upit_placeholder')
                         )
                     )
             )

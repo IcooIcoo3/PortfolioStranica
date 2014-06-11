@@ -1,14 +1,14 @@
 Icoo\UpitBundle\Entity\UpitEntity:
     properties:
         ime : 
-            - NotBlank : { message : "Ime ne smije biti prazno"}
+            - NotBlank : { message : "upitentity.ime.not_blank"}
             - Length : 
                 max : 100
-                maxMessage : "Žao nam je, ali ime ne smije imati više od 100 znakova"
+                maxMessage : "upitentity.ime.length"
         email :
-            - NotBlank : { message : "E-mail ne smije biti prazan"}
-            - Email: { message: "E-mail nije ispravan" }
+            - NotBlank : { message : "upitentity.email.not_blank"}
+            - Email: { message: "upitentity.email.email" }
         upit : 
             - Length : 
                 max : 5000
-                maxMessage: "Žao nam je, ali upit ne smije imati više od 5000 znakova"
+                maxMessage: "upitentity.upit.length"

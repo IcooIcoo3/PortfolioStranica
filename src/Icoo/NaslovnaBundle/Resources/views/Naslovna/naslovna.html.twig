@@ -18,7 +18,7 @@
 
     <div class='upit-form-wrap col-xs-8' id='upit-form-wrap-id'>
     	<div class='naslov-poruka col-xs-12'>
-    	    <h1>Pošaljite upit</h1>
+    	    <h1>{{ translation.naslov_upita }}</h1>
     	    {% if app.session.flashBag.get('poruka-poslana') == true %}
     	    <label>Vaš upit je zaprimljen. Javit ćemo vam se u najkraćem mogućem roku</label>
     	    {% endif %}
@@ -27,7 +27,7 @@
 	{{ form_start(form, {'attr' : {'novalidate' : 'novalidate', 'id' : 'form-upit-id'}}) }}
 
 		<div class='form-row'>
-			{{ form_label(form.ime, 'Ime /') }}
+			{{ form_label(form.ime, translation.ime ~ ' /') }}
 			{{ form_widget(form.ime) }}
 
 			{% if not form.ime.vars.valid %}
@@ -39,7 +39,7 @@
 	    </div>
 
 	    <div class='form-row'>
-	    	{{ form_label(form.email, 'Email /') }}
+	    	{{ form_label(form.email, translation.email ~ ' /') }}
 	    	{{ form_widget(form.email) }}
 
 	    	{% if not form.email.vars.valid %}
@@ -51,18 +51,24 @@
 	    </div>
 
 	    <div class='form-row'>
-	    	{{ form_label(form.upit, 'Upit ?') }}
+	    	{{ form_label(form.upit, translation.upit) }}
 
 	    	<div class='upit-textarea'>
 	    	    {{ form_widget(form.upit) }}
-	    	    {{ form_errors(form.upit) }}
 
 
 	    	    <div class='form-submit'>
-	    		    {{ form_widget(form.Posalji, {'label' : 'Pošalji'}) }}
+	    		    {{ form_widget(form.Posalji, {'label' : translation.upit_submit}) }}
 	    	    </div>
 	        </div>
+            {% if not form.upit.vars.valid %}
+                <div class="error">
+                    {{ form_errors(form.upit) }}
+                </div>
+            {%  endif %}
 	    </div>
+
+
 
 	{{ form_end(form) }}
     </div>

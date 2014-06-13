@@ -157,32 +157,28 @@ $(document).ready(function() {
 
     /* BROJAČ ZNAKOVA */
 
-    ( function() {
+    /*( function() {
         var brojac = $("<p class='brojac-znakova'>Preostalo znakova: <span id='trenutno'>0</span> od <span id='ukupno'>5000</span></p>");
         $('#form-submit-wrap-id').append(brojac);
+        var upitTextarea = document.getElementById('form_upit')
+        var trenutno = document.getElementById('trenutno');
+        trenutno.textContent = (parseInt(upitTextarea.textLength) == 0) ? 0 : upitTextarea.textLength;
 
-        var textarea = document.getElementById('form_upit');
-        var textareaCount = textarea.textLength;
-
+        var previous = 0, current = 0;
         $('#form_upit').keypress(function(evn) {
-            var trenutnoElem = document.getElementById('trenutno');
-            var trenutniBroj = parseInt(trenutnoElem.textContent)
-
-            if(textareaCount > 0) {
-                trenutnoElem.textContent = textareaCount;
+            current = upitTextarea.textLength;
+            if(upitTextarea.textLength == 0 && evn.charCode > 0) {
+                trenutno.textContent = upitTextarea.textLength + 1;
+            } else if(upitTextarea.textLength == 0) {
+                trenutno.textContent = 0;
+            } else if (evn.keyCode == 8) {
+                trenutno.textContent = upitTextarea.textLength;
+            } else {
+                trenutno.textContent = upitTextarea.textLength + 1;
             }
 
-            if(evn.keyCode == 8) {
-                console.log('kreten');
-                trenutnoElem.textContent = current - 1;
-                previous = trenutniBroj - 1;
-            }
-            else {
-                trenutnoElem.textContent = current + 1;
-                previous = trenutniBroj + 1;
-            }
         });
-    } () );
+    } () );*/
 
     /* UREĐENJA NA NAJČEŠĆIM PITANJIMA */
 

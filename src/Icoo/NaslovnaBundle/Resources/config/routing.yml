@@ -3,3 +3,4 @@ icoo_naslovna_route:
     defaults: { _controller: IcooNaslovnaBundle:Naslovna:naslovna, _locale: hr }
     requirements:
         _locale: hr|en|de
+

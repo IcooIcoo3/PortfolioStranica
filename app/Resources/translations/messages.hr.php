@@ -15,5 +15,5 @@ return array(
     'email-placeholder' => 'Vaša email adresa',
     'Upit?' => 'Upit?',
     'upit-placeholder' => 'Vaš upit...',
-    'upit-submit' => 'Pošalji'
+    'upit-submit' => 'Pošalji',
 );

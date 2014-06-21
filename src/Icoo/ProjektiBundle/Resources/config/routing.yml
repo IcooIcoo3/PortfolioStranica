@@ -1,10 +1,10 @@
-icoo_projekti_route:
+icoo_projekti_route_hr:
     pattern:  /{_locale}/projekti
     defaults: { _controller: IcooProjektiBundle:Projekti:projekti, _locale:hr }
     requirements:
         _locale: hr|en|de
 
-icoo_projekti_route:
+icoo_projekti_route_en:
     pattern:  /{_locale}/portfolio-projects
     defaults: { _controller: IcooProjektiBundle:Projekti:projekti, _locale:en }
     requirements:

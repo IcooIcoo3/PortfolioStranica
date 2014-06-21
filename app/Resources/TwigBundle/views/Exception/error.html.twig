@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IcooIcoo | Web development | Dizajn | Fotografija</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/eric_reset.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+
+</head>
+<body>
+<div class='main-wrap col-xs-12' id='main-wrap-id'>
+    <header class='header col-xs-7'>
+
+        <div class='color-wrap col-xs-12'>
+            <div class='firm-title col-xs-8'>
+                <h1 class='firm-name'><a href='{{ path('icoo_naslovna_route') }}'><span class='white-icoo'>ICOO</span><span class='black-icoo'>ICOO</span></a></h1>
+            </div>
+        </div>
+
+        <div class='space-align col-xs-12'>
+            <div class='firm-occupation col-xs-4'>
+                <h1>professional web development</h1>
+            </div>
+        </div>
+    </header>
+    <div class='aside-content col-xs-5'>
+        <div class='navigacija col-xs-12'>
+            <nav class='col-xs-5'>
+                <ul>
+                    <li><a href='{{ path('icoo_naslovna_route') }}' class='{% if route == 'icoo_naslovna_route'  %}{{ 'highlighted' }}{% endif %}'>Home</a></li>
+                    <li><a href='{{ path('icoo_djelatnost_route_' ~ app.request.getLocale()) }}'  class='{% if route == 'icoo_djelatnost_route'  %}{{ 'highlighted' }}{% endif %}'>About us</a></li>
+                    <li><a href='{{ path('icoo_projekti_route_' ~ app.request.getLocale()) }}'  class='{% if route == 'icoo_projekti_route'  %}{{ 'highlighted' }}{% endif %}'>Projects/Portfolio</a></li>
+                    <li><a href='{{ path('icoo_fotografija_route_' ~ app.request.getLocale()) }}'  class='{% if route == 'icoo_fotografija_route'  %}{{ 'highlighted' }}{% endif %}'>Web photography</a></li>
+                    <li><a href='{{ path('icoo_potrebe_projekta_route_' ~ app.request.getLocale()) }}'  class='{% if route == 'icoo_potrebe_projekta_route'  %}{{ 'highlighted' }}{% endif %}'>What do we need for a project?</a></li>
+                    <li><a href='{{ path('icoo_pitanja_route_' ~ app.request.getLocale()) }}'  class='{% if route == 'icoo_pitanja_route'  %}{{ 'highlighted' }}{% endif %}'>Common questions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+</html>

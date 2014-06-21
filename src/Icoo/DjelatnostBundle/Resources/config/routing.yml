@@ -1,10 +1,10 @@
-icoo_djelatnost_route:
+icoo_djelatnost_route_hr:
     pattern:  /{_locale}/sto-radimo
     defaults: { _controller: IcooDjelatnostBundle:Djelatnost:index, _locale:hr }
     requirements:
         _locale: hr|en|de
 
-icoo_djelatnost_route:
+icoo_djelatnost_route_en:
     pattern:  /{_locale}/about-us
     defaults: { _controller: IcooDjelatnostBundle:Djelatnost:index, _locale:en }
     requirements:

@@ -155,31 +155,6 @@ $(document).ready(function() {
         }
     });
 
-    /* BROJAČ ZNAKOVA */
-
-    /*( function() {
-        var brojac = $("<p class='brojac-znakova'>Preostalo znakova: <span id='trenutno'>0</span> od <span id='ukupno'>5000</span></p>");
-        $('#form-submit-wrap-id').append(brojac);
-        var upitTextarea = document.getElementById('form_upit')
-        var trenutno = document.getElementById('trenutno');
-        trenutno.textContent = (parseInt(upitTextarea.textLength) == 0) ? 0 : upitTextarea.textLength;
-
-        var previous = 0, current = 0;
-        $('#form_upit').keypress(function(evn) {
-            current = upitTextarea.textLength;
-            if(upitTextarea.textLength == 0 && evn.charCode > 0) {
-                trenutno.textContent = upitTextarea.textLength + 1;
-            } else if(upitTextarea.textLength == 0) {
-                trenutno.textContent = 0;
-            } else if (evn.keyCode == 8) {
-                trenutno.textContent = upitTextarea.textLength;
-            } else {
-                trenutno.textContent = upitTextarea.textLength + 1;
-            }
-
-        });
-    } () );*/
-
     /* UREĐENJA NA NAJČEŠĆIM PITANJIMA */
 
     ( function() {

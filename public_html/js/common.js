@@ -64,10 +64,10 @@ ICOOAPP.namespace('ICOOAPP.EventFunctions');
     }
 } () );
 
-ICOOAPP.namespace('FRIZERAPP.cache');
+ICOOAPP.namespace('ICOOAPP.cache');
 
 ( function() {
-    var cache = FRIZERAPP.cache;
+    var cache = ICOOAPP.cache;
 
     cache.flash = {};
     cache.local = {};
@@ -150,10 +150,10 @@ ICOOAPP.namespace('FRIZERAPP.cache');
     }
 }());
 
-ICOOAPP.namespace('FRIZERAPP.globals');
+ICOOAPP.namespace('ICOOAPP.globals');
 
 ( function() {
-    var globals = FRIZERAPP.globals;
+    var globals = ICOOAPP.globals;
 
     globals.getWidth = function() {
         var xWidth = null;

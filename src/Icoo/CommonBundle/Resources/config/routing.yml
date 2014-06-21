@@ -1,0 +1,3 @@
+icoo_ProjectInfoAjax_route:
+    pattern: /{_locale}/projects
+    defaults: { _controller: IcooCommonBundle:ProjectInfo:info }

@@ -30,7 +30,12 @@ class Translator
         'email_placeholder' => false,
         'upit' => false,
         'upit_placeholder' => false,
-        'upit_submit' => false
+        'upit_submit' => false,
+
+        'ProjectInfo' => false,
+
+        'pitanje_1_pitanje' => false,
+        'pitanje_1_odgovor' => false,
     );
 
     public static function init(TranslatorInterface $translator) {
@@ -65,6 +70,18 @@ class Translator
         $this->translated['upit'] = $this->translator->trans('Upit?');
         $this->translated['upit_placeholder'] = $this->translator->trans('upit-placeholder');
         $this->translated['upit_submit'] = $this->translator->trans('upit-submit');
+
+        return $this;
+    }
+
+    public function infoProjekta($index) {
+        $this->translated['ProjectInfo'] = $this->translator->trans($index);
+        return $this;
+    }
+
+    public function pitanja() {
+        $this->translated['pitanje_1_pitanje'] = $this->translator->trans('pitanje-1-pitanje');
+        $this->translated['pitanje_1_odgovor'] = $this->translator->trans('pitanje-1-odgovor');
 
         return $this;
     }

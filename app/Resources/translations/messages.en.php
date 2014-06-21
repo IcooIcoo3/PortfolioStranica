@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'Naslovna' => 'Home',
     'Što radimo' => 'About us',
@@ -14,5 +15,5 @@ return array(
     'email-placeholder' => 'Your email',
     'Upit?' => 'What would you like us to do?',
     'upit-placeholder' => 'I would like...',
-    'upit-submit' => 'Send'
+    'upit-submit' => 'Send',
 );

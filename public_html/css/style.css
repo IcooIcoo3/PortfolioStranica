@@ -27,6 +27,11 @@
     MAIN WRAP
 */
 
+body {
+    background-color: #e9e9e9;
+    height:100%;
+}
+
 .main-wrap {
     padding:0;
     background-color: #e9e9e9;
@@ -129,9 +134,23 @@
     font-size:1.3em;
 }
 
-.navigacija a:hover {
-    color: #C2272d;
+.navigacija li span {
+    transition-property:color;
+    transition-duration:0.2s;
+    -webkit-transition-property:color;
+    -webkit-transition-duration:0.2s;
+    -moz-transition-property:color;
+    -moz-transition-duration:0.2s;
+    -o-transition-property:color;
+    -o-transition-duration:0.2s;
+}
+
+.navigacija li:hover a {
     text-decoration: none;
+}
+
+.navigacija li:hover span {
+    color: #C2272d;
 }
 
 .navigacija .highlighted {
@@ -306,6 +325,38 @@
     border-bottom:1px dashed #C2272d;
 }
 
+/* PROJEKTI */
+
+.stranica-link {
+    display:none;
+    text-align: right;
+    color:black;
+}
+
+.stranica-link:hover {
+    text-decoration: underline;
+    color:black;
+}
+
+.project-info {
+    overflow:hidden;
+    padding:0;
+    background-color: white;
+}
+
+.project-wrap {
+    padding:0;
+}
+
+.project-wrap h1 {
+    font-size:1.3em;
+}
+
+/* FOTOGRAFIJA I SLIKE */
+
+.fotografija {
+}
+
 @media (min-width: 480px ) { 
 }
 
@@ -362,6 +413,13 @@
         float:left;
     }
 
+    #loading-id {
+        display:none;
+        float:right;
+        margin-top:0.5%;
+        color: #C2272d;
+    }
+
     /* UPIT FORMA */
 
     .naslov-poruka {
@@ -390,13 +448,22 @@
     }
 
     .navigacija nav {
-        margin-left:5%;
         padding-bottom:10%;
     }
 
+    .navigacija nav li {
+        float:left;
+    }
+
     .navigacija a {
-        padding:4.5%;
+        padding:3%;
         margin-bottom:4%;
+        float:left;
+    }
+
+    .navigacija .nav-icon {
+        float:left;
+        padding:1%;
     }
 
     /* FORMA UPITA */
@@ -414,7 +481,7 @@
 
     /* NAJČEŠĆA PITANJA */
 
-    .pitanja {
+    .pitanja, .error404, .projekti, .fotografija {
         float:left;
         margin:4% 0 3% 0;
     }
@@ -453,5 +520,106 @@
     .answer-list .answer-headline {
         margin:1% 0 1% 0;
         padding:1%;
+    }
+
+    /* PROJEKTI */
+
+    .projekti {
+        padding:0;
+    }
+
+    .projekti-pic {
+        height:610px;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .projekti-pic figure {
+        position:absolute;
+        top:0; left:0;
+        z-index:10;
+    }
+
+    .projekti-pic figure img {
+        display:block;
+    }
+
+    .projekti-nav {
+        margin-top:26%;
+    }
+
+    .projekti-nav button {
+        padding:0;
+        border:none;
+        background-color: transparent;
+    }
+
+    .projekti-nav #right-id, .projekti-nav #left-id {
+        color:black;
+    }
+
+    #right-id {
+        float:right;
+    }
+
+    #left-id {
+        float:left;
+    }
+
+    .stranica-link {
+        float:right;
+    }
+
+    .project-info {
+        float:left;
+        height:100%;
+    }
+
+    .project-info .project-wrap {
+        float:left;
+        padding:2% 0 2% 7%;
+    }
+
+    .project-wrap h1 {
+        line-height: 1.5em;
+        margin-top:4%;
+        margin-bottom:10%;
+    }
+
+    .project-wrap label {
+        padding:0 0 7% 0;
+    }
+
+    /* FOTOGRAFIJA I SLIKE */
+
+    .fotografija {
+        float:left;
+        padding:0;
+    }
+
+    .fotografija-wrap {
+        float:left;
+        padding:0;
+    }
+
+    .sidebar-fotografija {
+        float:left;
+        padding:0;
+        overflow:hidden;
+    }
+
+    .sidebar-fotografija figure img {
+        width:100%;
+    }
+
+    .fotografija-wrap figure {
+        float:left;
+        padding:0;
+    }
+
+    .fotografija-wrap figure img {
+        display:block;
+        width:100%;
+        height:400px;
     }
 }

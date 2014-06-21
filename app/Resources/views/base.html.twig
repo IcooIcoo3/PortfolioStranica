@@ -6,6 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        {% block global_css_js %}{% endblock %}
         {% block stylesheets %}{% endblock %}
         {% block javascript %}{% endblock %}
     </head>
@@ -24,6 +25,8 @@
             {% block potrebeProjekta %}{% endblock %}
             {% block pitanja %}{% endblock %}
             {% block upit %}{% endblock %}
+
+            {% block error404 %}{% endblock %}
         </div>
     </body>
 </html>

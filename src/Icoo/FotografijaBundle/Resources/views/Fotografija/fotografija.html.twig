@@ -4,4 +4,32 @@
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/eric_reset.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+	<link href="{{ asset('js/lightbox/css/lightbox.css') }}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block javascript %}
+    <script src='{{ asset('js/jquery-1.10.2.min.js') }}'></script>
+    <script src="{{ asset('js/lightbox/js/lightbox-2.6.min.js') }}"></script>
+{% endblock %}
+
+{% block fotografija %}
+    <div class="fotografija col-xs-7">
+        <div class="fotografija-wrap col-xs-12" id="fotografija-wrap-id">
+            {% for i in 52..87 %}
+            <figure class="col-xs-6">
+                <a href="{{ asset('images/galerija/thumbnail/slika' ~ i ~ '.jpg') }}" data-lightbox="fotografije">
+                    <img src="{{ asset('images/galerija/thumbnail/slika' ~ i ~ '.jpg') }}">
+                </a>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block changable_sidebar %}
+    <div class="sidebar-fotografija col-xs-12">
+        <figure>
+            <img src="{{ asset('images/projekti/kamera.jpg') }}"
+        </figure>
+    </div>
 {% endblock %}

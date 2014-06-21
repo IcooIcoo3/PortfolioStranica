@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    translator:      { fallback: "hr" }
+    translator:      { fallback: "en" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -23,6 +23,7 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    default_locale: en
 
 # Twig Configuration
 twig:
@@ -68,3 +69,14 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+services:
+    error_controller:
+        class: Icoo\CommonBundle\Controller\ErrorController
+
+#services:
+ #   language_change_listener:
+  #      class: Icoo\CommonBundle\EventListeners\LanguageChange
+   #     arguments: ["@service_container", "@request_stack"]
+    #    tags:
+     #   - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }

@@ -1,10 +1,10 @@
-icoo_fotografija_route:
+icoo_fotografija_route_hr:
     pattern:  /{_locale}/web-fotografija
     defaults: { _controller: IcooFotografijaBundle:Fotografija:fotografija, _locale:hr }
     requirements:
         _locale: hr|en|de
 
-icoo_fotografija_route:
+icoo_fotografija_route_en:
     pattern:  /{_locale}/web-photography
     defaults: { _controller: IcooFotografijaBundle:Fotografija:fotografija, _locale:en }
     requirements:

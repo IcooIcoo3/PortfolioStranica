@@ -4,4 +4,41 @@
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/eric_reset.css') }}" rel="stylesheet" media="screen">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('css/FontAwesome/css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascript %}
+    <script src='{{ asset('js/jquery-1.10.2.min.js') }}'></script>
+    <script src='{{ asset('js/common.js') }}'></script>
+    <script src='{{ asset('js/slider2.js') }}'></script>
+{% endblock %}
+
+{% block projekti %}
+    <div class="projekti col-xs-7" id="projekti-id">
+        <div class='projekti-pic col-xs-10' id='mario-slider'>
+            <figure data-mario-slider="www.apn.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/apn.jpg"></figure>
+            <figure data-mario-slider="www.izletiste-bara.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/bara.jpg"></figure>
+            <figure data-mario-slider="www.plesni-klub-bravo.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/bravo.jpg"></figure>
+            <figure data-mario-slider="www.fino.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/finohr.jpg"></figure>
+            <figure data-mario-slider="www.grubisnopolje.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/grubisnopolje.jpg"></figure>
+            <figure data-mario-slider="www.popara-trandler.com"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/popara-trandler.jpg"></figure>
+            <figure data-mario-slider="www.tlocrt.hr"><img src="/icooicoo/PortfolioStranica/public_html/images/projekti/tlocrt.jpg"></figure>
+        </div>
+
+        <div class='projekti-nav col-xs-2' id='projekti-nav-id'>
+            <a href=""><span class='fa fa-arrow-left fa-3x' id='left-id'></span></a>
+            <a href=""><span class='fa fa-arrow-right fa-3x' id='right-id'></span></a>
+        </div>
+
+        <a href="" class='col-xs-12 stranica-link' id="stranica-link-id" target="_blank">www.bara.hr</a>
+    </div>
+{% endblock %}
+
+{% block changable_sidebar %}
+
+   <div class="col-xs-12 project-info">
+       <div class="col-xs-10 project-wrap" id="project-info-id">
+       </div>
+   </div>
+
 {% endblock %}
